@@ -1,0 +1,341 @@
+/* Declare unique color */
+:root{
+    --background-color: #EEEEEE;
+    --main-color: rgb(141, 198, 63);
+    --point-color: rgb(43, 102, 83);
+}
+/* Delete space */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	background-color: var(--background-color);
+}
+.header{
+    font-weight: bold;
+    background-color: var(--main-color);
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main{
+    font-size: 40px;
+    margin-left: 30px;
+    text-shadow: 2px 2px 0px var(--point-color);
+}
+.menu{
+    display: flex;
+    margin-right: 60px;
+    align-items: center;
+    
+}
+.menu div{
+    margin-right: 50px;
+}
+.user{
+    display: flex;
+    margin-right: 30px;
+    list-style-type: none;
+}
+.user li{
+    margin-right: 30px;
+}
+.main, .creation, .log, #signup, #login{
+	cursor: default;
+}
+.container{
+	margin-top: 250px;
+	margin-bottom: 50px;
+}
+.container p{
+	font-size: 50px;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.worldcup-card {
+	align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+	margin: 30px;
+	padding: 10px;
+	height: 450px;
+	background-color: white;
+	display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px; /* border radius to give rounded corners */
+	box-shadow: 0 0 10px rgba(0,0,0,0.1); /* box shadow for a subtle 3D effect */
+}
+.card-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+}
+.card-image img{
+	height: 200px;
+}
+.card-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.card-text p{
+	font-size: 17px;
+}
+.card-subject{
+	font-size: x-large;
+	font-weight: bold;
+	text-shadow: 2px 2px 0px lightgrey;
+}
+.card-button{
+	width: 100%;
+	height: 50px;
+	border-radius: 20px;
+	border: none;
+	background-color: var(--main-color);
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* play_worldcup.html */
+.worldcup-container{
+    align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+    height: 60%; /* Adjusted for responsiveness */
+    width: 90%; /* Adjusted for responsiveness */
+    background-color: white;
+    margin: auto;
+    margin-top: 50px; /* Adjusted for responsiveness */
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px; /* border radius to give rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* box shadow for a subtle 3D effect */
+}
+
+@media (min-width: 768px) {
+    .worldcup-container {
+        height: 600px;
+        width: 1000px;
+        margin-top: 200px;
+    }
+}
+
+.worldcup-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+}
+.worldcup-image img{
+	height: 300px;
+}
+.worldcup-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; /* Vertical centering */
+    justify-items: center; /* Horizontal centering */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.worldcup-text p{
+	font-size: 25px;
+}
+.worldcup-subject{
+	font-size: 40px;
+	font-weight: bold;
+	text-shadow: 2px 2px 0px lightgrey;
+}
+.worldcup-status-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.worldcup-status-text {
+    color: var(--point-color);
+    font-size: 2em;
+}
+
+/* Additions for the login form */
+.login-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top:200px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: grid;
+    gap: 10px;
+}
+
+.login-container label {
+    font-size: 1.1em;
+    color: var(--point-color);
+}
+
+.login-container input[type="text"], .login-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid var(--point-color);
+    border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: var(--point-color);
+}
+
+/* Additions for the signup form */
+.signup-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top:200px;
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-container form {
+    display: grid;
+    gap: 10px;
+}
+
+.signup-container label {
+    font-size: 1.1em;
+    color: var(--point-color);
+}
+
+.signup-container input[type="text"], .signup-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid var(--point-color);
+    border-radius: 5px;
+}
+
+.signup-container input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.signup-container input[type="submit"]:hover {
+    background-color: var(--point-color);
+}
+
+/* winner.html */
+.winner-container{
+    width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top:200px;
+    text-align: center;
+}
+
+.winner-container h2{
+    color: var(--point-color);
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.winner-subject{
+	color: var(--main-color);
+	text-shadow: 2px 2px 0px var(--point-color);
+}
+
+.winner-image {
+    width: auto;
+    height: 300px;
+    margin: 30px auto;
+    justify-self: center;
+}
+
+.winner-text {
+	font-size: 25px;
+}
+.winner-button {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.winner-button:hover {
+    background-color: var(--point-color);
+}
+
+/* mylog.jsp */
+.log-container {
+    width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top:150px;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
